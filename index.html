@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WEYVA — Intent → Match → Do. Don't scroll life. Live it." />
+  <title>WEYVA — Don't Scroll Life. Live It.</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 50% 10%, #3a146d 0%, #140524 30%, #050507 65%);
+      color: white;
+      min-height: 100vh;
+    }
+
+    nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 28px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 5px;
+    }
+
+    .nav-tag {
+      color: #c6a8ff;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 78vh;
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 24px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      border: 3px solid #9b5cff;
+      box-shadow:
+        0 0 25px #7b2cff,
+        0 0 70px rgba(140, 58, 255, .45);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 35px;
+      background: #08050d;
+    }
+
+    .logo span {
+      font-size: 82px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #ffffff, #a467ff, #50d8ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    h1 {
+      font-size: clamp(55px, 10vw, 105px);
+      letter-spacing: 12px;
+      line-height: .95;
+    }
+
+    .tagline {
+      margin-top: 24px;
+      font-size: clamp(21px, 4vw, 34px);
+      color: #d9c8ff;
+    }
+
+    .mechanism {
+      margin-top: 36px;
+      font-size: clamp(24px, 5vw, 42px);
+      font-weight: 800;
+    }
+
+    .mechanism span {
+      color: #a968ff;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin-top: 30px;
+      line-height: 1.8;
+      font-size: 18px;
+      color: #c9c5d0;
+    }
+
+    .buttons {
+      margin-top: 42px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .button {
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 12px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .primary {
+      background: linear-gradient(135deg, #864cff, #a955ff);
+      color: white;
+      box-shadow: 0 0 25px rgba(143, 74, 255, .35);
+    }
+
+    .secondary {
+      border: 1px solid #7950a8;
+      color: white;
+      background: rgba(255,255,255,.03);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 45px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      padding: 30px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(179,112,255,.25);
+      border-radius: 18px;
+    }
+
+    .card h3 {
+      font-size: 25px;
+      margin-bottom: 15px;
+      color: #bd91ff;
+    }
+
+    .card p {
+      color: #c5c1ca;
+      line-height: 1.7;
+    }
+
+    .token-box {
+      max-width: 850px;
+      margin: auto;
+      padding: 34px;
+      border-radius: 20px;
+      border: 1px solid #6f3baa;
+      background: rgba(18,8,31,.75);
+    }
+
+    .contract {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 10px;
+      background: #09070d;
+      word-break: break-all;
+      color: #bd91ff;
+      font-family: monospace;
+    }
+
+    .warning {
+      margin-top: 26px;
+      line-height: 1.7;
+      color: #aaa4b1;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      color: #77717e;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    @media (max-width: 750px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">WEYVA</div>
+  <div class="nav-tag">A real-world social concept in development</div>
+</nav>
+
+<main>
+
+  <div class="hero">
+
+    <div class="logo">
+      <span>W</span>
+    </div>
+
+    <h1>WEYVA</h1>
+
+    <div class="tagline">
+      Don't scroll life. Live it.
+    </div>
+
+    <div class="mechanism">
+      Intent <span>→</span> Match <span>→</span> Do
+    </div>
+
+    <p class="intro">
+      WEYVA explores a simple idea: technology should help people move
+      from intention to real-world experiences — not keep them endlessly
+      scrolling. The project is currently in development.
+    </p>
+
+    <div class="buttons">
+      <a
+        class="button primary"
+        href="https://pump.fun/coin/DhMSoU74i9ojD1LX7wHSsZLQzbgMEzjLGrT9n3Pwpump"
+        target="_blank"
+        rel="noopener"
+      >
+        View $WEYVA on Pump.fun
+      </a>
+
+      <a class="button secondary" href="#vision">
+        Explore the Idea
+      </a>
+    </div>
+
+  </div>
+
+
+  <section id="vision">
+    <h2 class="section-title">From intention to real life.</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>01 — Intent</h3>
+        <p>
+          Start with something you genuinely want to do:
+          coffee, sport, an event, a walk, learning, exploring,
+          or simply meeting people.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>02 — Match</h3>
+        <p>
+          The WEYVA concept explores ways to connect compatible
+          intentions, people, places and opportunities.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>03 — Do</h3>
+        <p>
+          The goal is the real world. Less passive scrolling.
+          More activities, experiences and meaningful connection.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <h2 class="section-title">$WEYVA</h2>
+
+    <div class="token-box">
+
+      <p>
+        $WEYVA is an experimental community token connected to the
+        WEYVA project concept.
+      </p>
+
+      <div class="contract">
+        DhMSoU74i9ojD1LX7wHSsZLQzbgMEzjLGrT9n3Pwpump
+      </div>
+
+      <p class="warning">
+        Creator disclosure: The creator of WEYVA currently holds WEYVA tokens.
+        There is no promise of profit or guaranteed return.
+        The token does not represent equity, ownership or a claim on the WEYVA project.
+        Crypto assets can be highly volatile and may lose substantial or all of their value.
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  WEYVA © 2026 · Intent → Match → Do · Don't scroll life. Live it.
+</footer>
+
+</body>
+</html>
